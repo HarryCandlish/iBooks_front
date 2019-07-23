@@ -4,9 +4,10 @@ import "./App.css";
 
 import Nav from "./components/layout/Nav";
 import Home from "./components/pages/Home";
-import Books from "./components/books/Books";
+import Books from "./components/pages/Books";
 import { fetchBooks } from "./actions/bookActions";
 import { connect } from "react-redux";
+import Dashboard from "./components/pages/Dashboard";
 
 export class App extends Component {
   componentDidMount() {
@@ -18,6 +19,7 @@ export class App extends Component {
         <Nav />
         <Route exact path="/" component={Home} />
         <Route exact path="/books" component={Books} />
+        <Route exact path="/dash" component={Dashboard} />
       </Router>
     );
   }

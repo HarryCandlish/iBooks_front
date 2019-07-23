@@ -28,7 +28,7 @@ class Home extends Component {
                 </p>
               </li>
             </a>
-            <a className={homeStyles.flexbox} href="">
+            <a className={homeStyles.flexbox} href="/#/books">
               <li>
                 <img
                   className={homeStyles.imageBook}

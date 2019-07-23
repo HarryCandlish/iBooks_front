@@ -3,16 +3,16 @@ import booksStyles from "../../modules/books.module.scss";
 
 import { connect } from "react-redux";
 
-class Books extends Component {
+class BooksList extends Component {
   render() {
     return (
       <div>
-        <h1 className={booksStyles.title}>Books</h1>
+        <h1 className={booksStyles.title}>My Books</h1>
         <ol className={booksStyles.container}>
           {this.props.books.map(book => (
             <li className={booksStyles.flexbox} key={book.id}>
               <div className={booksStyles.titleBox}>
-                <h2 className={booksStyles.type}>{book.title}</h2>
+                <img src={book.image} className={booksStyles.image} />
               </div>
             </li>
           ))}
@@ -28,4 +28,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Books);
+export default connect(mapStateToProps)(BooksList);
